@@ -121,6 +121,17 @@ header {
 .hat {
   background-color: var(--brand-background-black);
   padding: 200px 0;
+  max-width: 1600px;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hat-background.jpg);
+  max-width: ;
+  background-size: cover;
+  background-position: center;
+  margin: auto;
 }
 .hat-container {
   display: flex;
@@ -169,6 +180,29 @@ header {
 .benefits-item {
   max-width: 270px;
 }
+.benefits-item::before {
+  display: block;
+  content: "";
+  height: 120px;
+  border-radius: 4px;
+  background-size: 70px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--brand-background-white);
+  margin-bottom: 30px;
+}
+.benefits-item.antenna::before {
+  background-image: url(../images/Antena.svg);
+}
+.benefits-item.clock::before {
+  background-image: url(../images/clock.svg);
+}
+.benefits-item.diagram::before {
+  background-image: url(../images/diagram.svg);
+}
+.benefits-item.astronaut::before {
+  background-image: url(../images/astronaut.svg);
+}
 .benefits-header {
   font-size: 14px;
   text-transform: uppercase;
@@ -198,6 +232,11 @@ header {
 }
 .team-section {
   background-color: var(--brand-background-white);
+}
+.team-item {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 .team-img {
   display: block;
@@ -290,6 +329,11 @@ footer {
 
 .portfolio-item {
   flex-basis: calc((100% - 60px) / 3);
+}
+.portfolio-item:focus,
+.portfolio-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .portfolio-description {
   padding: 24px 20px;
