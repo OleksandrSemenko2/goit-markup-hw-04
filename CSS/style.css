@@ -6,6 +6,7 @@
   --brand-background-black: #2f303a;
   --brand-color-dark-blue: #188ce8;
   --brand-background-white: #f5f4fa;
+  --brand-icons-gray: #afb1b8;
 }
 body {
   font-family: Roboto, sans-serif;
@@ -20,6 +21,9 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+a {
+  text-decoration: none;
 }
 .container {
   max-width: 1200px;
@@ -128,7 +132,6 @@ header {
       rgba(47, 48, 58, 0.4)
     ),
     url(../images/hat-background.jpg);
-  max-width: ;
   background-size: cover;
   background-position: center;
   margin: auto;
@@ -191,18 +194,7 @@ header {
   background-color: var(--brand-background-white);
   margin-bottom: 30px;
 }
-.benefits-item.antenna::before {
-  background-image: url(../images/Antena.svg);
-}
-.benefits-item.clock::before {
-  background-image: url(../images/clock.svg);
-}
-.benefits-item.diagram::before {
-  background-image: url(../images/diagram.svg);
-}
-.benefits-item.astronaut::before {
-  background-image: url(../images/astronaut.svg);
-}
+
 .benefits-header {
   font-size: 14px;
   text-transform: uppercase;
@@ -257,6 +249,41 @@ header {
 .team-description {
   background-color: var(--brand-color-white);
   padding: 30px;
+}
+.soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.soc-item {
+}
+.soc-link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--brand-color-white);
+  border-radius: 50%;
+}
+.soc-icon {
+  fill: #afb1b8;
+}
+.clients-list {
+  gap: 30px;
+  display: flex;
+}
+.clients-item {
+  width: calc((100% - 60px) / 3);
+}
+.clients-link {
+  width: 100%;
+  height: 92px;
+  border: 1px solid var(--brand-icons-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
 }
 footer {
   background-color: var(--brand-background-black);
@@ -335,6 +362,7 @@ footer {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+
 .portfolio-description {
   padding: 24px 20px;
   border-left: 1px solid #eeeeee;
@@ -344,6 +372,7 @@ footer {
 .portfolio-works-header {
   font-size: 18px;
   line-height: 2;
+  color: var(--brand-color-black);
   letter-spacing: 0.06em;
   margin: 0 0 4px 0;
 }
