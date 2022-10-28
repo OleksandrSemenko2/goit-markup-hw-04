@@ -7,6 +7,7 @@
   --brand-color-dark-blue: #188ce8;
   --brand-background-white: #f5f4fa;
   --brand-icons-gray: #afb1b8;
+  --brand-background-gray: rgba(255, 255, 255, 0.1);
 }
 body {
   font-family: Roboto, sans-serif;
@@ -106,8 +107,23 @@ header {
 .contact {
   color: var(--brand-color-gray);
 }
+.contact-item:hover .contact-icon {
+  fill: var(--brand-color-blue);
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+}
 .contact-item:last-child {
   margin-left: 50px;
+}
+.contact-icon-container {
+  margin-right: 10px;
+  padding: 32px 0;
+}
+.contact-icon {
+  fill: var(--brand-color-gray);
 }
 
 .visually-hidden {
@@ -303,6 +319,10 @@ footer {
   background-color: var(--brand-background-black);
   padding: 60px 0;
 }
+.footer-container {
+  display: flex;
+  justify-content: baseline;
+}
 .address-table {
   margin: 0;
 }
@@ -328,6 +348,36 @@ footer {
 .adres:hover {
   color: var(--brand-color-white);
 }
+.footer-soc-links-container {
+  margin-left: 70px;
+}
+.footer-soc-links-header {
+  color: var(--brand-color-white);
+  margin: 0 0 20px 0;
+}
+.footer-soc-list {
+  display: flex;
+  gap: 10px;
+}
+.footer-soc-item {
+  background-color: var(--brand-background-gray);
+  border-radius: 50%;
+}
+.footer-soc-item:hover {
+  background-color: var(--brand-color-blue);
+}
+.footer-soc-link {
+  color: var(--brand-color-white);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-soc-icon {
+  fill: currentColor;
+}
+
 .filter {
   display: flex;
   justify-content: center;
