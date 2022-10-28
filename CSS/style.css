@@ -183,15 +183,13 @@ header {
 .benefits-item {
   max-width: 270px;
 }
-.benefits-item::before {
-  display: block;
-  content: "";
+.benefits-icon-container {
+  display: flex;
   height: 120px;
   border-radius: 4px;
-  background-size: 70px;
-  background-position: center;
-  background-repeat: no-repeat;
   background-color: var(--brand-background-white);
+  justify-content: center;
+  align-items: center;
   margin-bottom: 30px;
 }
 
@@ -237,7 +235,7 @@ header {
   font-size: 16px;
   line-height: 1.178;
   letter-spacing: 0.03em;
-  margin: 10px 0 10px 0;
+  margin: 0px 0 10px 0;
 }
 .team-text {
   font-size: 16px;
@@ -249,11 +247,13 @@ header {
 .team-description {
   background-color: var(--brand-color-white);
   padding: 30px;
+  text-align: center;
 }
 .soc-list {
   display: flex;
   justify-content: center;
   gap: 10px;
+  margin-top: 16px;
 }
 .soc-item {
 }
@@ -265,10 +265,16 @@ header {
   justify-content: center;
   background-color: var(--brand-color-white);
   border-radius: 50%;
+  color: var(--brand-icons-gray);
+}
+.soc-link:hover {
+  background-color: var(--brand-color-blue);
+  color: var(--brand-color-white);
 }
 .soc-icon {
-  fill: #afb1b8;
+  fill: currentColor;
 }
+
 .clients-list {
   gap: 30px;
   display: flex;
@@ -284,6 +290,14 @@ header {
   align-items: center;
   justify-content: center;
   border-radius: 4px;
+  color: var(--brand-icons-gray);
+}
+.clients-icon {
+  fill: currentColor;
+}
+.clients-link:hover {
+  color: var(--brand-color-blue);
+  border-color: var(--brand-color-blue);
 }
 footer {
   background-color: var(--brand-background-black);
